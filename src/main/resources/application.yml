@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: dft-eureka
+
+server:
+  port: 4001
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    serviceUrl:
+      defaultZone: http://localhost:4001/eureka/
+
+    initial-instance-info-replication-interval-seconds: 10
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+    expected-client-renewal-interval-seconds: 10
+  instance:
+    leaseRenewalIntervalInSeconds: 5
